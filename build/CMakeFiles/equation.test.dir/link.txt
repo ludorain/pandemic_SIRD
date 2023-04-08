@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/equation.test.dir/EQUATION/doctest.cpp.o CMakeFiles/equation.test.dir/EQUATION/pandemic.cpp.o CMakeFiles/equation.test.dir/EQUATION/people.cpp.o CMakeFiles/equation.test.dir/EQUATION/parameters.cpp.o  -o equation.test 

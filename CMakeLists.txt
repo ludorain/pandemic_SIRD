@@ -18,15 +18,8 @@ find_package(SFML 2.5 COMPONENTS graphics REQUIRED)
 target_link_libraries(equation PRIVATE sfml-graphics)
 target_compile_options(equation PRIVATE -Wall -Wextra)
 
-if (BUILD_TESTING)
-  string(REGEX REPLACE  " " "-O2" CMAKE_EXE_LINKER_FLAGS_DEBUG "")
-  string(REGEX REPLACE  " " "-O2" CMAKE_CXX_FLAGS_DEBUG "")
-  add_executable(equation.test EQUATION/doctest.cpp EQUATION/pandemic.cpp EQUATION/people.cpp EQUATION/parameters.cpp)
-  add_test(NAME equation.test COMMAND equation.test)
+  
+add_executable(equation.test EQUATION/doctest.cpp EQUATION/pandemic.cpp EQUATION/people.cpp EQUATION/parameters.cpp)
+add_executable(agent.test AGENT/doctest.cpp AGENT/pandemic.cpp AGENT/parameters.cpp)
 
-  string(REGEX REPLACE  " " "-O2" CMAKE_EXE_LINKER_FLAGS_DEBUG "")
-  string(REGEX REPLACE  " " "-O2" CMAKE_CXX_FLAGS_DEBUG "")
-  add_executable(agent.test AGENT/doctest.cpp AGENT/pandemic.cpp AGENT/parameters.cpp)
-  add_test(NAME agent.test COMMAND agent.test)
 
-endif()

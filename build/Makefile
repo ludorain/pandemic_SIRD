@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named agent.test
+
+# Build rule for target.
+agent.test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 agent.test
+.PHONY : agent.test
+
+# fast build rule for target.
+agent.test/fast:
+	$(MAKE) -f CMakeFiles/agent.test.dir/build.make CMakeFiles/agent.test.dir/build
+.PHONY : agent.test/fast
+
+#=============================================================================
+# Target rules for targets named equation.test
+
+# Build rule for target.
+equation.test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 equation.test
+.PHONY : equation.test
+
+# fast build rule for target.
+equation.test/fast:
+	$(MAKE) -f CMakeFiles/equation.test.dir/build.make CMakeFiles/equation.test.dir/build
+.PHONY : equation.test/fast
+
+#=============================================================================
 # Target rules for targets named equation
 
 # Build rule for target.
@@ -135,6 +161,33 @@ agent: cmake_check_build_system
 agent/fast:
 	$(MAKE) -f CMakeFiles/agent.dir/build.make CMakeFiles/agent.dir/build
 .PHONY : agent/fast
+
+AGENT/doctest.o: AGENT/doctest.cpp.o
+
+.PHONY : AGENT/doctest.o
+
+# target to build an object file
+AGENT/doctest.cpp.o:
+	$(MAKE) -f CMakeFiles/agent.test.dir/build.make CMakeFiles/agent.test.dir/AGENT/doctest.cpp.o
+.PHONY : AGENT/doctest.cpp.o
+
+AGENT/doctest.i: AGENT/doctest.cpp.i
+
+.PHONY : AGENT/doctest.i
+
+# target to preprocess a source file
+AGENT/doctest.cpp.i:
+	$(MAKE) -f CMakeFiles/agent.test.dir/build.make CMakeFiles/agent.test.dir/AGENT/doctest.cpp.i
+.PHONY : AGENT/doctest.cpp.i
+
+AGENT/doctest.s: AGENT/doctest.cpp.s
+
+.PHONY : AGENT/doctest.s
+
+# target to generate assembly for a file
+AGENT/doctest.cpp.s:
+	$(MAKE) -f CMakeFiles/agent.test.dir/build.make CMakeFiles/agent.test.dir/AGENT/doctest.cpp.s
+.PHONY : AGENT/doctest.cpp.s
 
 AGENT/main_pandemic.o: AGENT/main_pandemic.cpp.o
 
@@ -169,6 +222,7 @@ AGENT/pandemic.o: AGENT/pandemic.cpp.o
 
 # target to build an object file
 AGENT/pandemic.cpp.o:
+	$(MAKE) -f CMakeFiles/agent.test.dir/build.make CMakeFiles/agent.test.dir/AGENT/pandemic.cpp.o
 	$(MAKE) -f CMakeFiles/agent.dir/build.make CMakeFiles/agent.dir/AGENT/pandemic.cpp.o
 .PHONY : AGENT/pandemic.cpp.o
 
@@ -178,6 +232,7 @@ AGENT/pandemic.i: AGENT/pandemic.cpp.i
 
 # target to preprocess a source file
 AGENT/pandemic.cpp.i:
+	$(MAKE) -f CMakeFiles/agent.test.dir/build.make CMakeFiles/agent.test.dir/AGENT/pandemic.cpp.i
 	$(MAKE) -f CMakeFiles/agent.dir/build.make CMakeFiles/agent.dir/AGENT/pandemic.cpp.i
 .PHONY : AGENT/pandemic.cpp.i
 
@@ -187,6 +242,7 @@ AGENT/pandemic.s: AGENT/pandemic.cpp.s
 
 # target to generate assembly for a file
 AGENT/pandemic.cpp.s:
+	$(MAKE) -f CMakeFiles/agent.test.dir/build.make CMakeFiles/agent.test.dir/AGENT/pandemic.cpp.s
 	$(MAKE) -f CMakeFiles/agent.dir/build.make CMakeFiles/agent.dir/AGENT/pandemic.cpp.s
 .PHONY : AGENT/pandemic.cpp.s
 
@@ -196,6 +252,7 @@ AGENT/parameters.o: AGENT/parameters.cpp.o
 
 # target to build an object file
 AGENT/parameters.cpp.o:
+	$(MAKE) -f CMakeFiles/agent.test.dir/build.make CMakeFiles/agent.test.dir/AGENT/parameters.cpp.o
 	$(MAKE) -f CMakeFiles/agent.dir/build.make CMakeFiles/agent.dir/AGENT/parameters.cpp.o
 .PHONY : AGENT/parameters.cpp.o
 
@@ -205,6 +262,7 @@ AGENT/parameters.i: AGENT/parameters.cpp.i
 
 # target to preprocess a source file
 AGENT/parameters.cpp.i:
+	$(MAKE) -f CMakeFiles/agent.test.dir/build.make CMakeFiles/agent.test.dir/AGENT/parameters.cpp.i
 	$(MAKE) -f CMakeFiles/agent.dir/build.make CMakeFiles/agent.dir/AGENT/parameters.cpp.i
 .PHONY : AGENT/parameters.cpp.i
 
@@ -214,8 +272,36 @@ AGENT/parameters.s: AGENT/parameters.cpp.s
 
 # target to generate assembly for a file
 AGENT/parameters.cpp.s:
+	$(MAKE) -f CMakeFiles/agent.test.dir/build.make CMakeFiles/agent.test.dir/AGENT/parameters.cpp.s
 	$(MAKE) -f CMakeFiles/agent.dir/build.make CMakeFiles/agent.dir/AGENT/parameters.cpp.s
 .PHONY : AGENT/parameters.cpp.s
+
+EQUATION/doctest.o: EQUATION/doctest.cpp.o
+
+.PHONY : EQUATION/doctest.o
+
+# target to build an object file
+EQUATION/doctest.cpp.o:
+	$(MAKE) -f CMakeFiles/equation.test.dir/build.make CMakeFiles/equation.test.dir/EQUATION/doctest.cpp.o
+.PHONY : EQUATION/doctest.cpp.o
+
+EQUATION/doctest.i: EQUATION/doctest.cpp.i
+
+.PHONY : EQUATION/doctest.i
+
+# target to preprocess a source file
+EQUATION/doctest.cpp.i:
+	$(MAKE) -f CMakeFiles/equation.test.dir/build.make CMakeFiles/equation.test.dir/EQUATION/doctest.cpp.i
+.PHONY : EQUATION/doctest.cpp.i
+
+EQUATION/doctest.s: EQUATION/doctest.cpp.s
+
+.PHONY : EQUATION/doctest.s
+
+# target to generate assembly for a file
+EQUATION/doctest.cpp.s:
+	$(MAKE) -f CMakeFiles/equation.test.dir/build.make CMakeFiles/equation.test.dir/EQUATION/doctest.cpp.s
+.PHONY : EQUATION/doctest.cpp.s
 
 EQUATION/main.o: EQUATION/main.cpp.o
 
@@ -250,6 +336,7 @@ EQUATION/pandemic.o: EQUATION/pandemic.cpp.o
 
 # target to build an object file
 EQUATION/pandemic.cpp.o:
+	$(MAKE) -f CMakeFiles/equation.test.dir/build.make CMakeFiles/equation.test.dir/EQUATION/pandemic.cpp.o
 	$(MAKE) -f CMakeFiles/equation.dir/build.make CMakeFiles/equation.dir/EQUATION/pandemic.cpp.o
 .PHONY : EQUATION/pandemic.cpp.o
 
@@ -259,6 +346,7 @@ EQUATION/pandemic.i: EQUATION/pandemic.cpp.i
 
 # target to preprocess a source file
 EQUATION/pandemic.cpp.i:
+	$(MAKE) -f CMakeFiles/equation.test.dir/build.make CMakeFiles/equation.test.dir/EQUATION/pandemic.cpp.i
 	$(MAKE) -f CMakeFiles/equation.dir/build.make CMakeFiles/equation.dir/EQUATION/pandemic.cpp.i
 .PHONY : EQUATION/pandemic.cpp.i
 
@@ -268,6 +356,7 @@ EQUATION/pandemic.s: EQUATION/pandemic.cpp.s
 
 # target to generate assembly for a file
 EQUATION/pandemic.cpp.s:
+	$(MAKE) -f CMakeFiles/equation.test.dir/build.make CMakeFiles/equation.test.dir/EQUATION/pandemic.cpp.s
 	$(MAKE) -f CMakeFiles/equation.dir/build.make CMakeFiles/equation.dir/EQUATION/pandemic.cpp.s
 .PHONY : EQUATION/pandemic.cpp.s
 
@@ -277,6 +366,7 @@ EQUATION/parameters.o: EQUATION/parameters.cpp.o
 
 # target to build an object file
 EQUATION/parameters.cpp.o:
+	$(MAKE) -f CMakeFiles/equation.test.dir/build.make CMakeFiles/equation.test.dir/EQUATION/parameters.cpp.o
 	$(MAKE) -f CMakeFiles/equation.dir/build.make CMakeFiles/equation.dir/EQUATION/parameters.cpp.o
 .PHONY : EQUATION/parameters.cpp.o
 
@@ -286,6 +376,7 @@ EQUATION/parameters.i: EQUATION/parameters.cpp.i
 
 # target to preprocess a source file
 EQUATION/parameters.cpp.i:
+	$(MAKE) -f CMakeFiles/equation.test.dir/build.make CMakeFiles/equation.test.dir/EQUATION/parameters.cpp.i
 	$(MAKE) -f CMakeFiles/equation.dir/build.make CMakeFiles/equation.dir/EQUATION/parameters.cpp.i
 .PHONY : EQUATION/parameters.cpp.i
 
@@ -295,6 +386,7 @@ EQUATION/parameters.s: EQUATION/parameters.cpp.s
 
 # target to generate assembly for a file
 EQUATION/parameters.cpp.s:
+	$(MAKE) -f CMakeFiles/equation.test.dir/build.make CMakeFiles/equation.test.dir/EQUATION/parameters.cpp.s
 	$(MAKE) -f CMakeFiles/equation.dir/build.make CMakeFiles/equation.dir/EQUATION/parameters.cpp.s
 .PHONY : EQUATION/parameters.cpp.s
 
@@ -304,6 +396,7 @@ EQUATION/people.o: EQUATION/people.cpp.o
 
 # target to build an object file
 EQUATION/people.cpp.o:
+	$(MAKE) -f CMakeFiles/equation.test.dir/build.make CMakeFiles/equation.test.dir/EQUATION/people.cpp.o
 	$(MAKE) -f CMakeFiles/equation.dir/build.make CMakeFiles/equation.dir/EQUATION/people.cpp.o
 .PHONY : EQUATION/people.cpp.o
 
@@ -313,6 +406,7 @@ EQUATION/people.i: EQUATION/people.cpp.i
 
 # target to preprocess a source file
 EQUATION/people.cpp.i:
+	$(MAKE) -f CMakeFiles/equation.test.dir/build.make CMakeFiles/equation.test.dir/EQUATION/people.cpp.i
 	$(MAKE) -f CMakeFiles/equation.dir/build.make CMakeFiles/equation.dir/EQUATION/people.cpp.i
 .PHONY : EQUATION/people.cpp.i
 
@@ -322,6 +416,7 @@ EQUATION/people.s: EQUATION/people.cpp.s
 
 # target to generate assembly for a file
 EQUATION/people.cpp.s:
+	$(MAKE) -f CMakeFiles/equation.test.dir/build.make CMakeFiles/equation.test.dir/EQUATION/people.cpp.s
 	$(MAKE) -f CMakeFiles/equation.dir/build.make CMakeFiles/equation.dir/EQUATION/people.cpp.s
 .PHONY : EQUATION/people.cpp.s
 
@@ -333,8 +428,13 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... agent.test"
+	@echo "... equation.test"
 	@echo "... equation"
 	@echo "... agent"
+	@echo "... AGENT/doctest.o"
+	@echo "... AGENT/doctest.i"
+	@echo "... AGENT/doctest.s"
 	@echo "... AGENT/main_pandemic.o"
 	@echo "... AGENT/main_pandemic.i"
 	@echo "... AGENT/main_pandemic.s"
@@ -344,6 +444,9 @@ help:
 	@echo "... AGENT/parameters.o"
 	@echo "... AGENT/parameters.i"
 	@echo "... AGENT/parameters.s"
+	@echo "... EQUATION/doctest.o"
+	@echo "... EQUATION/doctest.i"
+	@echo "... EQUATION/doctest.s"
 	@echo "... EQUATION/main.o"
 	@echo "... EQUATION/main.i"
 	@echo "... EQUATION/main.s"

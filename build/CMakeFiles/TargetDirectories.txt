@@ -1,4 +1,6 @@
 /home/ludovicarainero/pandemic_SIRD/build/CMakeFiles/rebuild_cache.dir
 /home/ludovicarainero/pandemic_SIRD/build/CMakeFiles/edit_cache.dir
+/home/ludovicarainero/pandemic_SIRD/build/CMakeFiles/agent.test.dir
+/home/ludovicarainero/pandemic_SIRD/build/CMakeFiles/equation.test.dir
 /home/ludovicarainero/pandemic_SIRD/build/CMakeFiles/equation.dir
 /home/ludovicarainero/pandemic_SIRD/build/CMakeFiles/agent.dir
