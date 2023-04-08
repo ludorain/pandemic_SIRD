@@ -100,7 +100,7 @@ Pandemic Pandemic::evolve(Pandemic& now, Parameters ps) {
     for (int c = 0; c < l; c++) {
       if (now.Reading_cell(r, c) == Person::Susceptible) {
         float p1 = dis(eng);
-        double b = ps.get_Beta() * now.infected_neighbours(now, r, c);
+        double b = ps.get_Beta() * now.infected_neighbours(now, r, c)/8;
 
         if (ps.get_Alfa() != 0 && p1 <= ps.get_Alfa()) {
           next.Writing_cell(r, c) = Person::Recovered;
