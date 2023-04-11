@@ -1,6 +1,5 @@
 # pandemic_SIRD
 
-# Pandemic-Simulation
 Per settare CMake:
 
 `cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug`
