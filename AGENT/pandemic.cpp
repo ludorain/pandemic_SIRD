@@ -10,6 +10,16 @@ Pandemic::Pandemic() : Side_{50}, Grid_(50 * 50) {
   I_ = 50;
   R_ = 0;
   D_ = 0;
+
+}
+
+Pandemic::Pandemic(int side) : Side_{side}, Grid_(side * side) {
+
+  S_ = 0.9*(side*side);
+  I_ = 0.1*(side*side);
+  R_ = 0;
+  D_ = 0;
+
 }
 
 void Pandemic::set_Side(int s) {

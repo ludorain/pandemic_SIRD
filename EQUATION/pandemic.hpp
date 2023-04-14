@@ -18,12 +18,12 @@ class Pandemic {
         void simulate();
 
         //Standard output function
-        void print();
+        void print() const;
 
         //Getter
-        Parameters get_Par();
-        std::vector<People> get_Population();
-        int get_Time();
+        Parameters get_Par() const;
+        std::vector<People> const& get_Population() const;
+        int get_Time() const;
 
     private:
 

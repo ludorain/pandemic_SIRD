@@ -14,6 +14,7 @@ class Pandemic
 
    //Default constructor
    Pandemic();
+   Pandemic(int);
 
    //Setting the grid 
    void set_I (int);
@@ -75,7 +76,16 @@ class Pandemic
    int I_;
    int R_;
    int D_;
+   
+   void invariant() const{
+      assert(S_>=0);
+      assert(I_>=0);
+      assert(R_>=0);
+      assert(D_>=0);
+      assert(S_*I_+R_+D_<=Side_*Side_);
+      assert(Grid_.size() >= Side_*Side_);
 
+   }
 };
 
 

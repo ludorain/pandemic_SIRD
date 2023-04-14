@@ -68,7 +68,7 @@ int People::get_Total() {
   return Tot;
 }
 
-int People::get_Susceptible() { return S_; };
+int People::get_Susceptible() const { return S_; };
 int People::get_Infected() { return I_; };
 int People::get_Recovered() { return R_; };
 int People::get_Deads() { return D_; };

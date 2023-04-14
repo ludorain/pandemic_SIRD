@@ -182,6 +182,7 @@ TEST_CASE("Testing method simulate.") {
   population.simulate();
 
   auto it=population.get_Population().begin();
+  (*it).get_Susceptible();
   int Size=population.get_Population().size();
 
   bool s, i, r, d;

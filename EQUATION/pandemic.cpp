@@ -31,17 +31,17 @@ bool Pandemic::set_Pandemic(People p, Parameters ps, int t){
 }
 
 //Class getter
-Parameters Pandemic::get_Par()
+Parameters Pandemic::get_Par() const
 {
   return Par_;
 }
 
-std::vector<People> Pandemic::get_Population()
+std::vector<People> const& Pandemic::get_Population() const
 {
   return Population_;
 }
 
-int Pandemic::get_Time()
+int Pandemic::get_Time() const
 {
   return Time_;
 }
@@ -147,7 +147,7 @@ void Pandemic::simulate(){
   }
 } 
 
-void Pandemic::print(){
+void Pandemic::print() const{
     auto it=Population_.begin();
     int Size=Population_.size();
     

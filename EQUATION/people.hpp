@@ -20,7 +20,7 @@ void set_People(int,int,int,int);
 
 //Getter functions
 int get_Total();
-int get_Susceptible();
+int get_Susceptible() const;
 int get_Infected();
 int get_Recovered();
 int get_Deads();
